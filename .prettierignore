@@ -1,0 +1,6 @@
+dotfiles config --local status.showUntrackedFiles nonode_modules
+dist
+build
+coverage
+*.md
+
