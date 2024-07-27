@@ -2,3 +2,7 @@
 dotfiles/
 .viminfo
 .gitconfig.local
+.zsh_history
+.bash_history
+.gitflow_export
+.dotfiles-backup/
