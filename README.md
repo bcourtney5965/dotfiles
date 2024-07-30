@@ -9,5 +9,5 @@ I use a git bare repo for .dotfile/config management
 
 # Installing on a New System
 ```
-curl https://raw.githubusercontent.com/bcourtney5965/dotfiles/main/scripts/.local/bin/config-init | bash
+curl https://raw.githubusercontent.com/bcourtney5965/dotfiles/main/scripts/.local/bin/config-init | bash && source ~/.zshrc
 ```

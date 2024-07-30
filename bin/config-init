@@ -12,10 +12,10 @@ function dotfiles {
 }
 
 # Backup any existing dotfiles
-mkdir -p .dotfiles-backup
+mkdir -p $HOME/.dotfiles-backup
 dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | 
 while read file; do
-    echo "Moving $file to .dotfiles-backup/"
+    echo "Moving $file to $HOME/.dotfiles-backup/"
     mv "$HOME/$file" "$HOME/.dotfiles-backup/"
 done
 
