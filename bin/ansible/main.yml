@@ -1,0 +1,29 @@
+---
+- name: Install packages on target hosts
+  hosts: localhost
+  connection: local
+  become: true
+
+  vars:
+    common_packages:
+      vim: vim
+      zsh: zsh
+
+  tasks:
+    - name: Include OS-specific variables
+      include_vars: '{{ ansible_os_family | lower }}.yml'
+
+    - name: Combine package lists
+      set_fact:
+        packages: '{{ common_packages | combine(additional_packages | default({})) }}'
+
+    - name: Include OS-specific tasks
+      include_tasks: '{{ ansible_os_family | lower }}_tasks.yml'
+
+    - name: Verify installations
+      include_tasks: verify_installations.yml
+      tags: [verify]
+
+    - name: Source .zshrc
+      shell: zsh -c "source ~/.zshrc && zsh"
+      tags: [config]
