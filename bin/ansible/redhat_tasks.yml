@@ -1,8 +1,0 @@
-- name: Update YUM package cache
-  yum:
-    update_cache: yes
-
-- name: Install packages with YUM
-  yum:
-    name: '{{ packages.values() | list }}'
-    state: present
