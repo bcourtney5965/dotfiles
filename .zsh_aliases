@@ -10,6 +10,7 @@ alias lt='ls -ltr'          # List files sorted by date, oldest last
 alias dots='cd ~/dotfiles'       # Navigate to dotfiles
 alias docs='cd ~/Documents'       # Navigate to Documents
 alias scripts='cd ~/scripts'   # Navigate to scripts
+alias y='yarn'              # yarn
 
 # zsh Aliases
 alias zshrc="source ~/.zshrc"
