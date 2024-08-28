@@ -1,5 +1,4 @@
 .DS_Store
-dotfiles/
 .viminfo
 .gitconfig.local
 .zsh_history
